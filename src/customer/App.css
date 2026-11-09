@@ -1,0 +1,20 @@
+/* Most styles now live in ../lib/theme.css. Only customer-specific bits here. */
+.pill{display:inline-flex;align-items:center;gap:var(--s2);background:var(--tile);border-radius:99px;padding:8px 14px;font-size:.875rem;font-weight:600}
+.foot{padding:var(--s6) 0 140px;text-align:center}
+.foot a{color:var(--muted);font-size:.8125rem}
+.done{max-width:560px;margin:0 auto;padding:clamp(24px,6vw,56px) 0 var(--s7)}
+.no{font-size:clamp(3.5rem,16vw,5.5rem);font-weight:700;color:var(--accent);line-height:1;margin:var(--s2) 0 var(--s4)}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:var(--s4) 20px;margin:var(--s5) 0}
+.steps{display:flex;margin:var(--s5) 0 var(--s2)}
+.st{flex:1;text-align:center;position:relative;font-size:.875rem;color:var(--muted)}
+.st i{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--tile);border:2px solid var(--line);margin:0 auto 6px;position:relative;z-index:1;color:var(--on-accent);transition:background-color .3s,border-color .3s}
+.st i .ic{width:14px;height:14px;stroke-width:3;opacity:0;transform:scale(.5);transition:opacity .25s,transform .3s var(--ease)}
+.st::before{content:"";position:absolute;top:13px;left:-50%;width:100%;height:2px;background:var(--line);transition:background-color .3s}
+.st:first-child::before{display:none}
+.st.on{color:var(--text);font-weight:600}
+.st.on i{background:var(--accent);border-color:var(--accent)}
+.st.on i .ic{opacity:1;transform:none}
+.st.on::before{background:var(--accent)}
+.msg{text-align:center;font-weight:600;margin:var(--s3) 0 0;animation:fade .3s}
+.paid{display:flex;align-items:center;gap:var(--s2);color:var(--muted);font-size:.875rem;margin:0 0 var(--s4)}
+.done + .done{border-top:1px solid var(--line)}
